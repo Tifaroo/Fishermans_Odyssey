@@ -1,0 +1,23 @@
+$itemid = widget["Hand"].element["0002"].item.id;
+if global.property["Tail_Chopped"] == false and $itemid == "ITEM_0027" then
+set_player_movement_locked(true);
+move_player("8e");
+//player.offset = array[0, 0, 1];
+move_player("8d");
+move_player("8c");
+entity["Bluegill_Tail_A"].offset = array[-8, 0, 0];
+entity["Bluegill_Tail_B"].offset = array[-8, 0, 0];
+move_player("8b");
+set_player_movement_locked(false);
+widget["Status"].element["0002"].text = "Store Scaled Fish";
+wait(2);
+remove_entity("Bluegill_Head_A");
+remove_entity("Bluegill_Head_B");
+remove_entity("Bluegill_Scale_Row_1a");
+remove_entity("Bluegill_Scale_Row_1b");
+remove_entity("Bluegill_Scale_Row_2a");
+remove_entity("Bluegill_Scale_Row_2b");
+remove_entity("Bluegill_Tail_A");
+remove_entity("Bluegill_Tail_B");
+widget["Hand"].element["0001"].item = "ITEM_0028";
+end;

@@ -1,0 +1,44 @@
+remove_item("ITEM_0021", 1);
+set_global_property("Fish_Placed", true);
+widget["Status"].element["0002"].text = "Scale the Fish";
+set_global_property("Yellowtail_Snapper_Scales", 6 );
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Head_A", "7c", "Yellowtail_Snapper_Head_A");
+set_entity_scale("Yellowtail_Snapper_Head_A", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Head_A"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Head_B", "7e", "Yellowtail_Snapper_Head_B");
+set_entity_scale("Yellowtail_Snapper_Head_B", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Head_B"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Scale_Row_1a", "8d", "Yellowtail_Snapper_Scale_Row_1a");
+set_entity_scale("Yellowtail_Snapper_Scale_Row_1a", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Scale_Row_1a"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Scale_Row_1b", "8e", "Yellowtail_Snapper_Scale_Row_1b");
+set_entity_scale("Yellowtail_Snapper_Scale_Row_1b", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Scale_Row_1b"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Scale_Row_2a", "9d", "Yellowtail_Snapper_Scale_Row_2a");
+set_entity_scale("Yellowtail_Snapper_Scale_Row_2a", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Scale_Row_2a"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Scale_Row_2b", "9e", "Yellowtail_Snapper_Scale_Row_2b");
+set_entity_scale("Yellowtail_Snapper_Scale_Row_2b", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Scale_Row_2b"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Scale_Row_3a", "10d", "Yellowtail_Snapper_Scale_Row_3a");
+set_entity_scale("Yellowtail_Snapper_Scale_Row_3a", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Scale_Row_3a"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Scale_Row_3b", "10e", "Yellowtail_Snapper_Scale_Row_3b");
+set_entity_scale("Yellowtail_Snapper_Scale_Row_3b", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Scale_Row_3b"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Tail_A", "11c", "Yellowtail_Snapper_Tail_A");
+set_entity_scale("Yellowtail_Snapper_Tail_A", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Tail_A"].offset = array[-4, 0, 0];
+
+add_object("First Fish Zone/Yellowtail Snapper/Yellowtail_Snapper_Tail_B", "11e", "Yellowtail_Snapper_Tail_B");
+set_entity_scale("Yellowtail_Snapper_Tail_B", 2, 2, 2, 0.2);
+entity["Yellowtail_Snapper_Tail_B"].offset = array[-4, 0, 0];

@@ -1,0 +1,20 @@
+$itemid = widget["Hand"].element["0002"].item.id;
+if $itemid == "ITEM_0027" then
+  set_global_property("Bluegill_Scales", global.property["Bluegill_Scales"] + -1);
+  play_animation(self, "scaled");
+	if self.property["conneceted_to_tail_a"] == true then
+	play_animation("Bluegill_Tail_A", "scaled");
+	end;
+	if self.property["conneceted_to_tail_b"] == true then
+	play_animation("Bluegill_Tail_B", "scaled");
+	end;
+  set_entity_script(self, null);
+end;
+
+if global.property["Bluegill_Scales"] == 0 and global.property["Fish_Placed"] == true then
+  widget["Status"].element["0002"].text = "Chop of the Head";
+  set_global_property("Fish_Scaled", true);
+  set_global_property("Head_Chopped", false);
+  set_global_property("Tail_Chopped", false);
+  set_entity_script(entity["Bluegill_Head_B"], "Bluegill_Chop_Head");
+end;

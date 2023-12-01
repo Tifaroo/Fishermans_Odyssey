@@ -1,0 +1,12 @@
+if player.inventory contains "ITEM_0027" then
+  set_global_property("Rainbow_Trout_Scales", global.property["Rainbow_Trout_Scales"] + -1);
+  play_animation(self, "scaled");
+  set_entity_script(self, null);
+end;
+if global.property["Rainbow_Trout_Scales"] == 0 and global.property["Fish_Placed"] == true then
+  widget["Status"].element["0002"].text = "Chop of the Head";
+  set_global_property("Fish_Scaled", true);
+  set_global_property("Head_Chopped", false);
+  set_global_property("Tail_Chopped", false);
+  set_entity_script(entity["Rainbow_Trout_Head_B"], "Rainbow_Trout_Chop_Head");
+end;

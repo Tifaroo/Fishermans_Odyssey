@@ -1,0 +1,68 @@
+
+//if player.inventory contains "ITEM_0011" then; //or player.inventory contains "ITEM_0012" or player.inventory contains "ITEM_0013" or player.inventory contains "ITEM_0014" or player.inventory contains "ITEM_0015" 
+remove_item("ITEM_0011", 1);
+set_global_property("Fish_Placed", true);
+set_global_property("Rainbow_Trout_Scales", 12 );
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Head_A", "6c", "Rainbow_Trout_Head_A");
+set_entity_scale("Rainbow_Trout_Head_A", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Head_B", "6e", "Rainbow_Trout_Head_B");
+set_entity_scale("Rainbow_Trout_Head_B", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_1a", "7d", "Rainbow_Trout_Scale_Row_1a");
+set_entity_scale("Rainbow_Trout_Scale_Row_1a", 2, 2, 2, 0.2);
+entity["Rainbow_Trout_Scale_Row_1a"].offset = array[0, 0, 0];
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_1b", "7e", "Rainbow_Trout_Scale_Row_1b");
+set_entity_scale("Rainbow_Trout_Scale_Row_1b", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_2a", "8d", "Rainbow_Trout_Scale_Row_2a");
+set_entity_scale("Rainbow_Trout_Scale_Row_2a", 2, 2, 2, 0.2);
+entity["Rainbow_Trout_Scale_Row_2a"].offset = array[0, 0, 0];
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_2b", "8e", "Rainbow_Trout_Scale_Row_2b");
+set_entity_scale("Rainbow_Trout_Scale_Row_2b", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_3a", "9d", "Rainbow_Trout_Scale_Row_3a");
+set_entity_scale("Rainbow_Trout_Scale_Row_3a", 2, 2, 2, 0.2);
+entity["Rainbow_Trout_Scale_Row_3a"].offset = array[0, 0, 0];
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_3b", "9e", "Rainbow_Trout_Scale_Row_3b");
+set_entity_scale("Rainbow_Trout_Scale_Row_3b", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_4a", "10d", "Rainbow_Trout_Scale_Row_4a");
+set_entity_scale("Rainbow_Trout_Scale_Row_4a", 2, 2, 2, 0.2);
+entity["Rainbow_Trout_Scale_Row_4a"].offset = array[0, 0, 0];
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_4b", "10e", "Rainbow_Trout_Scale_Row_4b");
+set_entity_scale("Rainbow_Trout_Scale_Row_4b", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_5a", "11d", "Rainbow_Trout_Scale_Row_5a");
+set_entity_scale("Rainbow_Trout_Scale_Row_5a", 2, 2, 2, 0.2);
+entity["Rainbow_Trout_Scale_Row_5a"].offset = array[0, 0, 0];
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_5b", "11e", "Rainbow_Trout_Scale_Row_5b");
+set_entity_scale("Rainbow_Trout_Scale_Row_5b", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_6a", "12d", "Rainbow_Trout_Scale_Row_6a");
+set_entity_scale("Rainbow_Trout_Scale_Row_6a", 2, 2, 2, 0.2);
+entity["Rainbow_Trout_Scale_Row_6a"].offset = array[0, 0, 0];
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Scale_Row_6b", "12e", "Rainbow_Trout_Scale_Row_6b");
+set_entity_scale("Rainbow_Trout_Scale_Row_6b", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Tail_A", "13c", "Rainbow_Trout_Tail_A");
+set_entity_scale("Rainbow_Trout_Tail_A", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Tail_B", "13e", "Rainbow_Trout_Tail_B");
+set_entity_scale("Rainbow_Trout_Tail_B", 2, 2, 2, 0.2);
+//replace_navigation(self, INTERACT_ONLY, WALK_AND_INTERACT);
+//end;
+
+//if global.property["Rainbow_Trout_Scales"] == 0 and global.property["Fish_Placed"] == true then;
+//remove_entity("Rainbow_Trout_Head_A");
+//set_global_property("Fish_Scaled", true);
+//give_item("ITEM_0031");
+//end;
+

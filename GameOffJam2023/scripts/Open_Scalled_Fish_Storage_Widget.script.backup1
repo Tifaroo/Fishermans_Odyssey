@@ -1,0 +1,37 @@
+$itemid = widget["Hand"].element["0001"].item.id;
+if $itemid == "ITEM_0031" then
+set_global_property("Fish_Scaled", false);
+widget["Hand"].element["0001"].item = null;
+set_global_property("Fish_Placed",false);
+set_global_property("Head_Chopped",true);
+widget["Status"].element["0002"].text = "Grab a Fish";
+end;
+if $itemid == "ITEM_0032" then
+set_global_property("Fish_Scaled", false);
+widget["Hand"].element["0001"].item = null;
+set_global_property("Fish_Placed",false);
+set_global_property("Head_Chopped",true);
+widget["Status"].element["0002"].text = "Grab a Fish";
+end;
+if $itemid == "ITEM_0028" then
+set_global_property("Fish_Scaled", false);
+widget["Hand"].element["0001"].item = null;
+set_global_property("Fish_Placed",false);
+set_global_property("Head_Chopped",true);
+widget["Status"].element["0002"].text = "Grab a Fish";
+end;
+if $itemid == "ITEM_0029" then
+set_global_property("Fish_Scaled", false);
+widget["Hand"].element["0001"].item = null;
+set_global_property("Fish_Placed",false);
+set_global_property("Head_Chopped",true);
+widget["Status"].element["0002"].text = "Grab a Fish";
+end;
+if $itemid == "ITEM_0030" then
+set_global_property("Fish_Scaled", false);
+widget["Hand"].element["0001"].item = null;
+set_global_property("Fish_Placed",false);
+set_global_property("Head_Chopped",true);
+widget["Status"].element["0002"].text = "Grab a Fish";
+end;
+//show_widget("Collected Fish");

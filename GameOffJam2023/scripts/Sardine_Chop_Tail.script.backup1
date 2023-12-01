@@ -1,0 +1,40 @@
+$itemid = widget["Hand"].element["0002"].item.id;
+if global.property["Tut"] == true then
+	if global.property["Tail_Chopped"] == false and $itemid == "ITEM_0027" then
+		set_player_movement_locked(true);
+		wait(0.2);
+		move_player("10d");
+	//player.offset = array[0, 0, 1];
+		move_player("10c");
+		entity["Sardine_Tail"].offset = array[8, 0, 0];
+		move_player("10b");
+		play_sound("Cut_V2");
+		set_player_movement_locked(false);
+		widget["Status"].element["0002"].text = "Store Scaled Fish";
+		wait(0.2);
+		remove_entity("Sardine_Head");
+		remove_entity("Sardine_Scale_Row_1");
+		remove_entity("Sardine_Scale_Row_2");
+		remove_entity("Sardine_Tail");
+		widget["Hand"].element["0001"].item = "ITEM_0030";
+  		start_dialogue("Put_Away_Scaled_Tut");
+	end;
+else	
+	if global.property["Tail_Chopped"] == false and $itemid == "ITEM_0027" then
+		set_player_movement_locked(true);
+		move_player("10d");
+	//player.offset = array[0, 0, 1];
+		move_player("10c");
+		entity["Sardine_Tail"].offset = array[8, 0, 0];
+		move_player("10b");
+		play_sound("Cut_V2");
+		set_player_movement_locked(false);
+		widget["Status"].element["0002"].text = "Store Scaled Fish";
+		wait(0.2);
+		remove_entity("Sardine_Head");
+		remove_entity("Sardine_Scale_Row_1");
+		remove_entity("Sardine_Scale_Row_2");
+		remove_entity("Sardine_Tail");
+		widget["Hand"].element["0001"].item = "ITEM_0030";
+	end;
+end;

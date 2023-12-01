@@ -1,0 +1,18 @@
+$itemid = widget["Hand"].element["0002"].item.id;
+if $itemid == "ITEM_0007" and global.property["Tweezers_Bought"] == true then
+widget["Hand"].element["0002"].item = null;
+//play_animation(self, "put_tweezers_back");
+play_animation(player,"default_hand");
+override_animation(player, "walk", "walk");
+override_animation(player, "idle", "idle");
+elseif global.property["Tweezers_Bought"] == true then
+//play_animation(self, "pick_tweezers_up");
+//play_animation(player,"tweezers_idle");
+override_animation(player, "walk", "tweezers_walk");
+override_animation(player, "idle", "tweezers_idle");
+widget["Hand"].element["0002"].item = "ITEM_0007";
+end;
+
+
+//$itemid = widget["Hand"].element["0001"].item.id;
+//if $itemid == "ITEM_0031" then

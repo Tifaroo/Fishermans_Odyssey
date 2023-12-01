@@ -1,0 +1,19 @@
+//load_map("scaling table", coord[0, 1, 0], NORTH);
+//lock_camera();
+//look_at_target(entity["center_of_table"]);
+global.property["Money"] = player.stat["currency"];
+load_map("Scaling_Table_Mini", coord[-1, 5, 0], NORTH);
+player.stat["currency"] = global.property["Money"];
+lock_camera();
+look_at_target(entity["center_of_map"]);
+//add_object("First Fish Zone/Rainbow Trout/Rainbow_Trout_Head", "Head_01", "fish_head");
+show_widget("Status");
+show_widget("Leave");
+show_widget("Hand");
+hide_widget("Money");
+hide_widget("Fishing");
+if global.property["Tweezers_Bought"] == true then
+  modify_navigation(entity["Tweez2"], entity["Tweez3"], WALK_AND_INTERACT);
+  modify_navigation(entity["Tweez1"], entity["Tweez2"], WALK_AND_INTERACT);
+  play_animation(entity["Tweez"], "put_tweezers_back");
+end

@@ -1,0 +1,2 @@
+
+set_global_property("Zone1Fishlist", array["sardine", "haddock", "bluegill", "yellowtailSnapper", "rainbowTrout"]);

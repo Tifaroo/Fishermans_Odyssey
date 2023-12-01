@@ -1,0 +1,10 @@
+$item_id = widget["Widget_Sell_Fish"].element["0001"].item.id;
+if $item_id == "ITEM_0030" or $item_id == "ITEM_0029" or $item_id == "ITEM_0028" or $item_id == "ITEM_0031" or $item_id == "ITEM_0032" then
+	for $number in range (1, 26) do
+			$IDnumber = make4LenNum($number);
+			if widget["Collected Fish"].element[str($IDnumber)].item == null then
+				widget["Collected Fish"].element[str($IDnumber)].item = $item_id;
+				break;
+			end;
+	end;
+end;

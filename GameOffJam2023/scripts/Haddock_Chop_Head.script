@@ -1,0 +1,17 @@
+$itemid = widget["Hand"].element["0002"].item.id;
+if global.property["Head_Chopped"] == false and $itemid == "ITEM_0027" then
+set_player_movement_locked(true);
+move_player("8e");
+wait(0.2);
+//player.offset = array[0, 0, 1];
+move_player("8d");
+play_sound("Cut_V2");
+entity["Haddock_Head_A"].offset = array[-8, 0, 0];
+entity["Haddock_Head_B"].offset = array[-8, 0, 0];
+move_player("8c");
+set_player_movement_locked(false);
+set_global_property("Tail_Chopped", false);
+set_entity_script(entity["Haddock_Tail_B"], "Haddock_Chop_Tail");
+widget["Status"].element["0002"].text = "Chop off the Tail";
+//player.offset = array[0, 0, -1];
+end;

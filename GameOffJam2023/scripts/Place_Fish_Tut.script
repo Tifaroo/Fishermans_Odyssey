@@ -1,0 +1,4 @@
+$itemid = widget["Hand"].element["0001"].item.id;
+if $itemid == "ITEM_0020" then
+execute_script("sardine_spawn");
+end;

@@ -1,0 +1,7 @@
+//wait(0.2);
+override_animation(self, "default", "boat");
+wait(0.5);
+override_animation(self, "default", "regular");
+//override_animation(player, "walk", "new_walk");
+//play_animation(self, "anim_name");
+//play_animation(self, "anim_name");

@@ -1,0 +1,17 @@
+widget["Hand"].element["0001"].item = null;
+set_global_property("Fish_Placed", true);
+widget["Status"].element["0002"].text = "Scale the Fish";
+set_global_property("Smelt_Scales", 2 );
+set_global_property("Smelt_Mini_Scales", 14 );
+
+add_object("Zone 2/Smelt/Smelt_Head", "8d", "Smelt_Head");
+set_entity_scale("Smelt_Head", 2, 2, 2, 0.2);
+
+add_object("Zone 2/Smelt/Smelt_Scale_Row_1", "9d", "Smelt_Scale_Row_1");
+set_entity_scale("Smelt_Scale_Row_1", 2, 2, 2, 0.2);
+
+add_object("Zone 2/Smelt/Smelt_Scale_Row_2", "10d", "Smelt_Scale_Row_2");
+set_entity_scale("Smelt_Scale_Row_2", 2, 2, 2, 0.2);
+
+add_object("Zone 2/Smelt/Smelt_Tail", "11d", "Smelt_Tail");
+set_entity_scale("Smelt_Tail", 2, 2, 2, 0.2);

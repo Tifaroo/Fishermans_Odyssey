@@ -1,0 +1,11 @@
+load_map("Boat_Map_V2", coord[0, -1, 0]);
+fade_in(1);
+set_global_property("Zone1FishList", array["sardine", "haddock", "bluegill", "yellowtailSnapper", "rainbowTrout"]);
+set_global_property("FishToItemID", codex["sardine":"ITEM_0020","haddock":"ITEM_0008","bluegill":"ITEM_0003","yellowtailSnapper":"ITEM_0021","rainbowTrout":"ITEM_0014"]);
+print(global.property["FishToItemID"]["sardine"]);
+print(global.property["Zone1FishList"][1]);
+//give_item("ITEM_0032", 1);
+show_widget("Money");
+set_movement_speed(player, 100);
+player.stat["currency"] += 1000;
+global.property["Money"] = player.stat["currency"];

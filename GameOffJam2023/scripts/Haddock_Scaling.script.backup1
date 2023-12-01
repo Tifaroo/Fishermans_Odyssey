@@ -1,0 +1,24 @@
+if player.inventory contains "ITEM_0027" then
+  set_global_property("Haddock_Scales", global.property["Haddock_Scales"] + -1);
+  play_animation(self, "scaled");
+	if self.property["conneceted_to_tail_a"] == true then
+	play_animation("Haddock_Tail_A", "scaled");
+	end;
+	if self.property["conneceted_to_tail_b"] == true then
+	play_animation("Haddock_Tail_B", "scaled");
+	end;
+	if self.property["conneceted_to_head_a"] == true then
+	play_animation("Haddock_Head_A", "scaled");
+	end;
+	if self.property["conneceted_to_head_b"] == true then
+	play_animation("Haddock_Head_B", "scaled");
+	end;
+  set_entity_script(self, null);
+end;
+if global.property["Haddock_Scales"] == 0 and global.property["Fish_Placed"] == true then
+  widget["Status"].element["0002"].text = "Chop of the Head";
+  set_global_property("Fish_Scaled", true);
+  set_global_property("Head_Chopped", false);
+  set_global_property("Tail_Chopped", false);
+  set_entity_script(entity["Haddock_Head_B"], "Haddock_Chop_Head");
+end;

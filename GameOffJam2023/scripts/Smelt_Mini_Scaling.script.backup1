@@ -1,0 +1,36 @@
+$itemid = widget["Hand"].element["0002"].item.id;
+if $itemid == "ITEM_0007" and self.property["Mini_Scales_Remaining"] == 7 then
+  self.property["Mini_Scales_Remaining"] = self.property["Mini_Scales_Remaining"] + -1;
+  play_animation(self, "Mini_Scale_1");
+elseif $itemid == "ITEM_0007" and self.property["Mini_Scales_Remaining"] == 6 then
+  self.property["Mini_Scales_Remaining"] = self.property["Mini_Scales_Remaining"] + -1;
+  play_animation(self, "Mini_Scale_2");
+elseif $itemid == "ITEM_0007" and self.property["Mini_Scales_Remaining"] == 5 then
+  self.property["Mini_Scales_Remaining"] = self.property["Mini_Scales_Remaining"] + -1;
+  play_animation(self, "Mini_Scale_3");
+elseif $itemid == "ITEM_0007" and self.property["Mini_Scales_Remaining"] == 4 then
+  self.property["Mini_Scales_Remaining"] = self.property["Mini_Scales_Remaining"] + -1;
+  play_animation(self, "Mini_Scale_4");
+elseif $itemid == "ITEM_0007" and self.property["Mini_Scales_Remaining"] == 3 then
+  self.property["Mini_Scales_Remaining"] = self.property["Mini_Scales_Remaining"] + -1;
+  play_animation(self, "Mini_Scale_5");
+elseif $itemid == "ITEM_0007" and self.property["Mini_Scales_Remaining"] == 2 then
+  self.property["Mini_Scales_Remaining"] = self.property["Mini_Scales_Remaining"] + -1;
+  play_animation(self, "Mini_Scale_6");
+elseif $itemid == "ITEM_0007" and self.property["Mini_Scales_Remaining"] == 1 then
+  self.property["Mini_Scales_Remaining"] = self.property["Mini_Scales_Remaining"] + -1;
+  play_animation(self, "Mini_Scale_7");
+elseif self.property["Mini_Scales_Remaining"] == 0 then
+  set_global_property("Smelt_Mini_Scales", global.property["Smelt_Mini_Scales"] + -7);
+  set_entity_script(self, null);
+end;
+if global.property["Smelt_Mini_Scales"] == 0 and global.property["Fish_Placed"] == true then
+  set_global_property("Smelt_Mini_Scales", global.property["Smelt_Mini_Scales"] + -7);
+  widget["Status"].element["0002"].text = "Chop of the Head";
+
+  set_global_property("Fish_Scaled", true);
+  set_global_property("Head_Chopped", false);
+  set_global_property("Tail_Chopped", false);
+  set_entity_script(entity["Smelt_Head"], "Smelt_Chop_Head");
+end;
+//set_global_property("Smelt_Mini_Scales", global.property["Smelt_Mini_Scales"] + -1);

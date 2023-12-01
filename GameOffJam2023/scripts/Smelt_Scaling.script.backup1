@@ -1,0 +1,18 @@
+$itemid = widget["Hand"].element["0002"].item.id;
+if $itemid == "ITEM_0027" then
+  set_global_property("Smelt_Scales", global.property["Smelt_Scales"] + -1);
+  play_animation(self, "scaled");
+	//if self.property["conneceted_to_tail"] == true then
+	//play_animation("Smelt_Tail", "scaled");
+	//end;
+	//if self.property["conneceted_to_head"] == true then
+	//play_animation("Smelt_Head", "scaled");
+	//end;
+	set_entity_script(self, null);
+end;
+if global.property["Smelt_Scales"] == 0 and global.property["Fish_Placed"] == true then
+  print("Debug Message");
+  widget["Status"].element["0002"].text = "Take off the Remaining Scales";
+  set_entity_script(entity["Smelt_Scale_Row_1"], "Smelt_Mini_Scaling");
+  set_entity_script(entity["Smelt_Scale_Row_2"], "Smelt_Mini_Scaling");
+end;

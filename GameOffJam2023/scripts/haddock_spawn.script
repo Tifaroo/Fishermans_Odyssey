@@ -1,0 +1,31 @@
+//remove_item("ITEM_0006", 1);
+widget["Hand"].element["0001"].item = null;
+set_global_property("Fish_Placed", true);
+widget["Status"].element["0002"].text = "Scale the Fish";
+set_global_property("Haddock_Scales", 4 );
+
+add_object("First Fish Zone/Haddock/Haddock_Head_A", "8c", "Haddock_Head_A");
+set_entity_scale("Haddock_Head_A", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Haddock/Haddock_Head_B", "8e", "Haddock_Head_B");
+set_entity_scale("Haddock_Head_B", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Haddock/Haddock_Scale_Row_1a", "9d", "Haddock_Scale_Row_1a");
+set_entity_scale("Haddock_Scale_Row_1a", 2, 2, 2, 0.2);
+entity["Haddock_Scale_Row_1a"].offset = array[0, 0, 0];
+
+add_object("First Fish Zone/Haddock/Haddock_Scale_Row_1b", "9e", "Haddock_Scale_Row_1b");
+set_entity_scale("Haddock_Scale_Row_1b", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Haddock/Haddock_Scale_Row_2a", "10d", "Haddock_Scale_Row_2a");
+set_entity_scale("Haddock_Scale_Row_2a", 2, 2, 2, 0.2);
+entity["Haddock_Scale_Row_2a"].offset = array[0, 0, 0];
+
+add_object("First Fish Zone/Haddock/Haddock_Scale_Row_2b", "10e", "Haddock_Scale_Row_2b");
+set_entity_scale("Haddock_Scale_Row_2b", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Haddock/Haddock_Tail_A", "11c", "Haddock_Tail_A");
+set_entity_scale("Haddock_Tail_A", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Haddock/Haddock_Tail_B", "11e", "Haddock_Tail_B");
+set_entity_scale("Haddock_Tail_B", 2, 2, 2, 0.2);

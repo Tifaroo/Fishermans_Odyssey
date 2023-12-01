@@ -1,0 +1,32 @@
+function selectRandomFish() begin
+    $dice = Roll_dice();  //Roll a 6-sided die
+    $rarityThreshold = random(1, 100);  //Generate a random number from 1 to 100
+
+    $commonThreshold = 60;
+    $uncommonThreshold = 75;
+    $rareThreshold = 90;
+    $epicThreshold = 98;
+
+    $selectedFish = $fishList[0]; //Default to Common fish
+
+    if $dice >= 2 and $rarityThreshold <= $commonThreshold then
+        $selectedFish = $fishList[0];
+		print("You caught the Common Fish")  //Common
+    elseif $dice >= 3 and $rarityThreshold <= $uncommonThreshold then
+        $selectedFish = $fishList[1];
+		print("You caught the Uncommon Fish") //Uncommon
+    elseif $dice >= 4 and $rarityThreshold <= $rareThreshold then
+        $selectedFish = $fishList[2];
+		print("You caught the Rare Fish") //Rare
+    elseif $dice >= 5 and $rarityThreshold <= $epicThreshold then
+        $selectedFish = $fishList[3]; 
+		print("You caught the Epic Fish") //Epic
+    elseif $dice == 6 then
+        $selectedFish = $fishList[4]; 
+		print("You caught the Legendary Fish"); //Legendary
+    else
+        print("You didn't catch any fish this time.")  //Display a catch failure message
+    end;
+
+    return $selectedFish
+end;

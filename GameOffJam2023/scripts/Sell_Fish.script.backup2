@@ -1,0 +1,39 @@
+player.stat["currency"] = global.property["Money"];
+$item_id = widget["Widget_Sell_Fish"].element["0001"].item.id;
+//print(player.stat["currency"]);
+if $item_id == "ITEM_0030" then
+widget["Widget_Sell_Fish"].element["0001"].item = null;
+player.stat["currency"] += 50;
+global.property["Money"] = player.stat["currency"];
+start_dialogue("Thanks_For_Fish");
+play_sound("Shop");
+elseif $item_id == "ITEM_0029" then
+widget["Widget_Sell_Fish"].element["0001"].item = null;
+player.stat["currency"] += 100;
+global.property["Money"] = player.stat["currency"];
+start_dialogue("Thanks_For_Fish");
+play_sound("Shop");
+elseif $item_id == "ITEM_0028" then
+widget["Widget_Sell_Fish"].element["0001"].item = null;
+player.stat["currency"] += 150;
+global.property["Money"] = player.stat["currency"];
+start_dialogue("Thanks_For_Fish");
+play_sound("Shop");
+elseif $item_id == "ITEM_0031" then
+widget["Widget_Sell_Fish"].element["0001"].item = null;
+player.stat["currency"] += 200;
+global.property["Money"] = player.stat["currency"];
+start_dialogue("Thanks_For_Fish");
+play_sound("Shop");
+elseif $item_id == "ITEM_0032" then
+widget["Widget_Sell_Fish"].element["0001"].item = null;
+player.stat["currency"] += 250;
+global.property["Money"] = player.stat["currency"];
+start_dialogue("Thanks_For_Fish");
+play_sound("Shop");
+else;
+start_dialogue("No_Fish");
+end;
+global.property["Money"] = player.stat["currency"];
+print(player.stat["currency"]);
+

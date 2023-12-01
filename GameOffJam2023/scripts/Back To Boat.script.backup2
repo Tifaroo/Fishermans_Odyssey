@@ -1,0 +1,16 @@
+//if global.property["FishingZone1"] == true then
+//load map
+$itemid = widget["Hand"].element["0002"].item.id;
+if $itemid == "ITEM_0027" or global.property["Has_Fish"] == true  then
+display_message("I have to put the knife back before I can leave the table.");
+else
+load_map("Boat_Map_V2", coord[3, -1, 0], SOUTH);
+reset_map("Back To Boat");
+hide_widget("Status");
+hide_widget("Leave");
+hide_widget("Hand");
+hide_widget("Collected Fish");
+hide_widget("Scaled Fish");
+show_widget("Money");
+set_movement_speed(player, 100);
+end

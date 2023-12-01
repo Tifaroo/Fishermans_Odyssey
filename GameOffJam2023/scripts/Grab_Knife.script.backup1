@@ -1,0 +1,18 @@
+$itemid = widget["Hand"].element["0002"].item.id;
+if $itemid == "ITEM_0027" then
+widget["Hand"].element["0002"].item = null;
+play_animation(self, "put_knife_back");
+play_animation(player,"default_hand");
+override_animation(player, "walk", "walk");
+override_animation(player, "idle", "idle");
+else
+play_animation(self, "pick_knife_up");
+play_animation(player,"knife");
+override_animation(player, "walk", "knife_walk");
+override_animation(player, "idle", "knife_idle");
+widget["Hand"].element["0002"].item = "ITEM_0027";
+end;
+
+
+//$itemid = widget["Hand"].element["0001"].item.id;
+//if $itemid == "ITEM_0031" then

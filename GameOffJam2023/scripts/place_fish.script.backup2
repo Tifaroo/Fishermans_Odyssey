@@ -1,0 +1,18 @@
+$itemid = widget["Hand"].element["0001"].item.id;
+if $itemid == "ITEM_0011" then
+execute_script("rainbow_trout_spawn");
+elseif $itemid == "ITEM_0001" then
+execute_script("bluegill_spawn");
+elseif $itemid == "ITEM_0003" then
+execute_script("haddock_spawn");
+elseif $itemid == "ITEM_0008" then
+execute_script("yellowtail_snapper_spawn");
+elseif $itemid == "ITEM_0017" then
+execute_script("sardine_spawn");
+end;
+
+//if global.property["Zone2_Unlocked"] == true then;
+	//if player.inventory contains "ITEM_0000" then
+	//execute_script("fish_spawn");
+//	end;
+//end;

@@ -1,0 +1,10 @@
+if player.stat["currency"] >= 1000 and global.property["tweezers_bought"] == false then
+  set_global_property("tweezers_bought", true);
+  player.stat["currency"] -= 1000;
+  play_animation(entity["Tweez"], "put_tweezers_back");
+  global.property["Money"] = player.stat["currency"];
+elseif player.stat["currency"] <= 1000 and global.property["tweezers_bought"] == false then
+  display_message("You do not have enought money to buy this");
+elseif global.property["tweezers_bought"] == true then
+  display_message("You already bought this.");
+end;

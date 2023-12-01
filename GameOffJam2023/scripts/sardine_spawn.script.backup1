@@ -1,0 +1,16 @@
+remove_item("ITEM_0016", 1);
+set_global_property("Fish_Placed", true);
+widget["Status"].element["0002"].text = "Scale the Fish";
+set_global_property("Sardine_Scales", 2 );
+
+add_object("First Fish Zone/Sardine/Sardine_Head", "8d", "Sardine_Head");
+set_entity_scale("Sardine_Head", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Sardine/Sardine_Scale_Row_1", "9d", "Sardine_Scale_Row_1");
+set_entity_scale("Sardine_Scale_Row_1", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Sardine/Sardine_Scale_Row_2", "10d", "Sardine_Scale_Row_2");
+set_entity_scale("Sardine_Scale_Row_2", 2, 2, 2, 0.2);
+
+add_object("First Fish Zone/Sardine/Sardine_Tail", "11d", "Sardine_Tail");
+set_entity_scale("Sardine_Tail", 2, 2, 2, 0.2);
