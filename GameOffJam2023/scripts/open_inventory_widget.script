@@ -1,0 +1,2 @@
+display_message("Press I to close and open Widget");
+show_widget("Fishing_Inventory");

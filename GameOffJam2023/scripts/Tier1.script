@@ -1,0 +1,10 @@
+if player.stat["currency"] >= 5000 and global.property["Tier1FishLic"] == false then
+  set_global_property("Tier1FishLic", true);
+  player.stat["currency"] += -5000;
+
+  global.property["Money"] = player.stat["currency"];
+elseif player.stat["currency"] <= 5000 and global.property["Tier1FishLic"] == false then
+  display_message("You do not have enought money to buy this");
+elseif global.property["Tier1FishLic"] == true then
+  display_message("You already bought this.");
+end;
