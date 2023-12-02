@@ -2,4 +2,3 @@
 load_map("TutMap", coord[0, -1, 0]);
 fade_out(1);
 start_dialogue("Intro");
-widget["Collected Fish"].element["0001"].item = "ITEM_0020";
